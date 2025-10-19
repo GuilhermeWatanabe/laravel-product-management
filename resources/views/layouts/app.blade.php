@@ -15,12 +15,12 @@
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
     </head>
     <body>
-        <div>
-            @include('layouts.navigation')
+        @include('layouts.navigation')
 
+        <div class="container mt-3">
             <!-- Page Heading -->
             @isset($header)
-                <header class="text-center">
+                <header>
                     <div>
                         {{ $header }}
                     </div>
@@ -28,7 +28,7 @@
             @endisset
 
             <!-- Page Content -->
-            <main class="container">
+            <main class="mt-3">
                 {{ $slot }}
             </main>
         </div>
