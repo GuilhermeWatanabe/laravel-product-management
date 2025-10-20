@@ -108,7 +108,7 @@ A solução oferece duas interfaces principais:
     ```bash
     docker-compose exec app php artisan migrate --seed
     ```
-    
+
 ### Acesso à Aplicação
 
 ? Pronto! A aplicação já está rodando.
