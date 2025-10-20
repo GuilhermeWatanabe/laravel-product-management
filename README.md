@@ -66,7 +66,7 @@ A solução oferece duas interfaces principais:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/GuilhermeWatanabe/laravel-product-management.git](https://github.com/GuilhermeWatanabe/laravel-product-management.git)
+    git clone https://github.com/GuilhermeWatanabe/laravel-product-management.git
     cd laravel-product-management
     ```
 
@@ -87,26 +87,26 @@ A solução oferece duas interfaces principais:
     ```
     > **Nota:** O valor `DB_HOST=db` é essencial. `db` é o nome do serviço do banco de dados definido no arquivo `docker-compose.yml`, permitindo que os contêineres se comuniquem pela rede interna do Docker.
 
-3.  **Suba os contêineres do Docker:**
+3.  **Instale as dependências do Composer:**
+    ```bash
+    composer install
+    ```
+
+4.  **Gere a chave da aplicação:**
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  **Suba os contêineres do Docker:**
     Este comando irá construir as imagens e iniciar os serviços em background.
     ```bash
     docker-compose up -d --build
     ```
 
-4.  **Instale as dependências do Composer:**
-    ```bash
-    docker-compose exec app composer install
-    ```
-
-5.  **Gere a chave da aplicação:**
-    ```bash
-    docker-compose exec app php artisan key:generate
-    ```
-
 6.  **Execute as migrations e popule o banco de dados:**
     Este comando irá criar as tabelas e popular a tabela de produtos com dados de exemplo (o usuário para acesso ainda precisará ser criado na tela de registro do sistema).
     ```bash
-    docker-compose exec app php artisan migrate --seed
+    docker compose exec app php artisan migrate --seed
     ```
 
 ### Acesso à Aplicação
