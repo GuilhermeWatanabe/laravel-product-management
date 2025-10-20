@@ -116,6 +116,9 @@ A solução oferece duas interfaces principais:
 
 8.  **Execute as migrations e popule o banco de dados:**
     Este comando irá criar as tabelas e popular a tabela de produtos com dados de exemplo (o usuário para acesso ainda precisará ser criado na tela de registro do sistema).
+
+    > **Nota:** Espere um pouco para executar esse comando pois os contêineres podem não ter subido ainda, o que pode gerar um erro se o comando abaixo for executado muito rápido.
+
     ```bash
     docker compose exec app php artisan migrate --seed
     ```
