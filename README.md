@@ -206,13 +206,13 @@ Para acessar os endpoints protegidos, primeiro obtenha um token via `/api/login`
 ## 🖼️ Screenshots das Principais Telas
 
 ### Tela de Login
-![img_1.png](img_1.png)
+![img_1.png](.github/assets/img_1.png)
 
 ### Tela de Login com Credenciais Inválidas.
-![img_2.png](img_2.png)
+![img_2.png](.github/assets/img_2.png)
 
 ### Tela de Produtos
-![img_3.png](img_3.png)
+![img_3.png](.github/assets/img_3.png)
 
 ### Demonstração do CRUD
 ![Demonstração do CRUD](.github/assets/CRUD.gif)
@@ -220,22 +220,22 @@ Para acessar os endpoints protegidos, primeiro obtenha um token via `/api/login`
 ## 🖼️ Screenshots das Rotas da API
 
 ### Rota de Registro de Usuário
-![img_4.png](img_4.png)
+![img_4.png](.github/assets/img_4.png)
 
 ### Rota de Login
-![img_5.png](img_5.png)
+![img_5.png](.github/assets/img_5.png)
 
 ### Rota de Listagem de Produtos
-![img_6.png](img_6.png)
+![img_6.png](.github/assets/img_6.png)
 
 ### Rota de Cadastrar Produto
-![img_7.png](img_7.png)
+![img_7.png](.github/assets/img_7.png)
 
 ### Rota de Buscar Produto
-![img_8.png](img_8.png)
+![img_8.png](.github/assets/img_8.png)
 
 ### Rota de Atualizar Produto
-![img_9.png](img_9.png)
+![img_9.png](.github/assets/img_9.png)
 
 ### Rota de Deletar Produto
-![img_10.png](img_10.png)
+![img_10.png](.github/assets/img_10.png)
