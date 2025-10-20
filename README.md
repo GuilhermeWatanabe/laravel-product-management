@@ -1,4 +1,4 @@
-# Gerenciador de Produtos - Teste TÈcnico Laravel
+# Gerenciador de Produtos - Teste T√©cnico Laravel
 
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-777BB4?style=for-the-badge&logo=php)
 ![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel)
@@ -6,65 +6,65 @@
 ![MySQL](https://img.shields.io/badge/MySQL-9.4.0-4479A1?style=for-the-badge&logo=mysql)
 ![PHPUnit](https://img.shields.io/badge/Tests-PHPUnit-8892BF?style=for-the-badge)
 
-## ? DescriÁ„o do Projeto
+## üìù Descri√ß√£o do Projeto
 
-Este projeto È uma aplicaÁ„o web completa para o gerenciamento de produtos, desenvolvida como soluÁ„o para um teste tÈcnico de Desenvolvedor PHP. A aplicaÁ„o foi construÌda utilizando **Laravel 12** e encapsulada em um ambiente **Docker**, seguindo as melhores pr·ticas de desenvolvimento, como princÌpios **SOLID**, arquitetura limpa e uma suÌte de **testes automatizados**.
+Este projeto √© uma aplica√ß√£o web completa para o gerenciamento de produtos, desenvolvida como solu√ß√£o para um teste t√©cnico de Desenvolvedor PHP. A aplica√ß√£o foi constru√≠da utilizando **Laravel 12** e encapsulada em um ambiente **Docker**, seguindo as melhores pr√°ticas de desenvolvimento, como princ√≠pios **SOLID**, arquitetura limpa e uma su√≠te de **testes automatizados**.
 
-A soluÁ„o oferece duas interfaces principais:
-1.  Uma **Interface Web (Full-Stack)** com autenticaÁ„o e um CRUD completo para gerenciar produtos.
-2.  Uma **API RESTful** protegida por token (Laravel Sanctum) que expıe os mesmos endpoints de CRUD para integraÁ„o com outros sistemas.
+A solu√ß√£o oferece duas interfaces principais:
+1.  Uma **Interface Web (Full-Stack)** com autentica√ß√£o e um CRUD completo para gerenciar produtos.
+2.  Uma **API RESTful** protegida por token (Laravel Sanctum) que exp√µe os mesmos endpoints de CRUD para integra√ß√£o com outros sistemas.
 
-## ? Õndice
+## üìú √çndice
 
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Funcionalidades Implementadas](#-funcionalidades-implementadas)
-- [Como Executar a AplicaÁ„o](#-como-executar-a-aplicaÁ„o)
+- [Como Executar a Aplica√ß√£o](#-como-executar-a-aplica√ß√£o)
 - [Como Executar os Testes](#-como-executar-os-testes)
-- [DocumentaÁ„o da API](#-documentaÁ„o-da-api)
+- [Documenta√ß√£o da API](#-documenta√ß√£o-da-api)
 - [Screenshots (Exemplos)](#-screenshots-exemplos)
-- [LicenÁa](#-licenÁa)
+- [Licen√ßa](#-licen√ßa)
 
-## ? Tecnologias Utilizadas
+## üöÄ Tecnologias Utilizadas
 
 - **Backend:** PHP 8.3, Laravel 12
 - **Frontend:** Blade, Bootstrap 5
 - **Banco de Dados:** MySQL 9.4.0
-- **Servidores e ContÍineres:** Docker, Docker Compose
-- **AutenticaÁ„o:** Laravel Breeze (Web), Laravel Sanctum (API)
+- **Servidores e Cont√™ineres:** Docker, Docker Compose
+- **Autentica√ß√£o:** Laravel Breeze (Web), Laravel Sanctum (API)
 - **Testes:** PHPUnit
 
-## ? Funcionalidades Implementadas
+## ‚úÖ Funcionalidades Implementadas
 
-- [x] **Ambiente Docker:** ConfiguraÁ„o com Docker Compose para os serviÁos de `app` (PHP-FPM) e `db` (MySQL).
-- [x] **Sistema de AutenticaÁ„o:**
-    - [x] AutenticaÁ„o baseada em sess„o para a interface web (Laravel Breeze).
-    - [x] AutenticaÁ„o baseada em token para a API (Laravel Sanctum).
+- [x] **Ambiente Docker:** Configura√ß√£o com Docker Compose para os servi√ßos de `app` (PHP-FPM) e `db` (MySQL).
+- [x] **Sistema de Autentica√ß√£o:**
+    - [x] Autentica√ß√£o baseada em sess√£o para a interface web (Laravel Breeze).
+    - [x] Autentica√ß√£o baseada em token para a API (Laravel Sanctum).
 - [x] **CRUD Completo via Interface Web:**
-    - [x] Tela de listagem de produtos com paginaÁ„o.
-    - [x] Formul·rios para criar e editar produtos.
-    - [x] Tela para visualizaÁ„o de detalhes de um produto.
+    - [x] Tela de listagem de produtos com pagina√ß√£o.
+    - [x] Formul√°rios para criar e editar produtos.
+    - [x] Tela para visualiza√ß√£o de detalhes de um produto.
     - [x] Funcionalidade para excluir produtos.
 - [x] **API RESTful Protegida:**
-    - [x] Endpoints para todas as operaÁıes CRUD (`index`, `store`, `show`, `update`, `destroy`).
-    - [x] Rotas protegidas exigindo um token de autenticaÁ„o `Bearer`.
-- [x] **ValidaÁıes e Tratamento de Erros:**
-    - [x] ValidaÁıes robustas no backend utilizando `Form Requests`.
-    - [x] Feedback visual de erros nos formul·rios web.
+    - [x] Endpoints para todas as opera√ß√µes CRUD (`index`, `store`, `show`, `update`, `destroy`).
+    - [x] Rotas protegidas exigindo um token de autentica√ß√£o `Bearer`.
+- [x] **Valida√ß√µes e Tratamento de Erros:**
+    - [x] Valida√ß√µes robustas no backend utilizando `Form Requests`.
+    - [x] Feedback visual de erros nos formul√°rios web.
     - [x] Respostas de erro padronizadas em JSON para a API.
 - [x] **Testes Automatizados:**
-    - [x] **Testes Unit·rios:** Para validar as restriÁıes e o comportamento do Model `Produto`.
-    - [x] **Testes de Feature:** Cobertura completa para todos os controllers (Web e API), simulando requisiÁıes HTTP e validando respostas, status e interaÁıes com o banco de dados.
+    - [x] **Testes Unit√°rios:** Para validar as restri√ß√µes e o comportamento do Model `Produto`.
+    - [x] **Testes de Feature:** Cobertura completa para todos os controllers (Web e API), simulando requisi√ß√µes HTTP e validando respostas, status e intera√ß√µes com o banco de dados.
 
-## ?? Como Executar a AplicaÁ„o
+## ‚öôÔ∏è Como Executar a Aplica√ß√£o
 
-### PrÈ-requisitos
+### Pr√©-requisitos
 - Git
 - Docker
 - Docker Compose
 
-### Passos para InstalaÁ„o
+### Passos para Instala√ß√£o
 
-1.  **Clone o repositÛrio:**
+1.  **Clone o reposit√≥rio:**
     ```bash
     git clone [https://github.com/GuilhermeWatanabe/laravel-product-management.git](https://github.com/GuilhermeWatanabe/laravel-product-management.git)
     cd laravel-product-management
@@ -75,7 +75,7 @@ A soluÁ„o oferece duas interfaces principais:
     ```bash
     cp .env.example .env
     ```
-    **Importante: Edite o arquivo `.env`!** Para que a aplicaÁ„o no contÍiner Docker consiga se comunicar com o contÍiner do banco de dados, vocÍ precisa ajustar as vari·veis de conex„o. Garanta que as seguintes vari·veis estejam configuradas da seguinte forma:
+    **Importante: Edite o arquivo `.env`!** Para que a aplica√ß√£o no cont√™iner Docker consiga se comunicar com o cont√™iner do banco de dados, voc√™ precisa ajustar as vari√°veis de conex√£o. Garanta que as seguintes vari√°veis estejam configuradas da seguinte forma:
 
     ```ini
     DB_CONNECTION=mysql
@@ -85,58 +85,58 @@ A soluÁ„o oferece duas interfaces principais:
     DB_USERNAME=user
     DB_PASSWORD=password
     ```
-    > **Nota:** O valor `DB_HOST=db` È essencial. `db` È o nome do serviÁo do banco de dados definido no arquivo `docker-compose.yml`, permitindo que os contÍineres se comuniquem pela rede interna do Docker.
+    > **Nota:** O valor `DB_HOST=db` √© essencial. `db` √© o nome do servi√ßo do banco de dados definido no arquivo `docker-compose.yml`, permitindo que os cont√™ineres se comuniquem pela rede interna do Docker.
 
-3.  **Suba os contÍineres do Docker:**
-    Este comando ir· construir as imagens e iniciar os serviÁos em background.
+3.  **Suba os cont√™ineres do Docker:**
+    Este comando ir√° construir as imagens e iniciar os servi√ßos em background.
     ```bash
     docker-compose up -d --build
     ```
 
-4.  **Instale as dependÍncias do Composer:**
+4.  **Instale as depend√™ncias do Composer:**
     ```bash
     docker-compose exec app composer install
     ```
 
-5.  **Gere a chave da aplicaÁ„o:**
+5.  **Gere a chave da aplica√ß√£o:**
     ```bash
     docker-compose exec app php artisan key:generate
     ```
 
 6.  **Execute as migrations e popule o banco de dados:**
-    Este comando ir· criar as tabelas e popular a tabela de produtos com dados de exemplo (o usu·rio para acesso ainda precisar· ser criado na tela de registro do sistema).
+    Este comando ir√° criar as tabelas e popular a tabela de produtos com dados de exemplo (o usu√°rio para acesso ainda precisar√° ser criado na tela de registro do sistema).
     ```bash
     docker-compose exec app php artisan migrate --seed
     ```
 
-### Acesso ‡ AplicaÁ„o
+### Acesso √† Aplica√ß√£o
 
-? Pronto! A aplicaÁ„o j· est· rodando.
+üéâ Pronto! A aplica√ß√£o j√° est√° rodando.
 
 - **Interface Web:** [http://localhost:8000](http://localhost:8000)
 - **Base da API:** `http://localhost:8000/api/`
 
-## ? Como Executar os Testes
+## üß™ Como Executar os Testes
 
-A aplicaÁ„o possui uma suÌte completa de testes unit·rios e de feature para garantir a qualidade e a integridade do cÛdigo.
+A aplica√ß√£o possui uma su√≠te completa de testes unit√°rios e de feature para garantir a qualidade e a integridade do c√≥digo.
 
-### ?? AVISO IMPORTANTE: ConfiguraÁ„o do Banco de Dados de Testes
+### ‚ö†Ô∏è AVISO IMPORTANTE: Configura√ß√£o do Banco de Dados de Testes
 
-> Este projeto est· configurado para executar os testes no **mesmo banco de dados** utilizado para o desenvolvimento (`DB_HOST=db`, `DB_DATABASE=laravel_db`).
+> Este projeto est√° configurado para executar os testes no **mesmo banco de dados** utilizado para o desenvolvimento (`DB_HOST=db`, `DB_DATABASE=laravel_db`).
 >
-> Isso significa que ao rodar a suÌte de testes, o trait `RefreshDatabase` do Laravel **IR¡ APAGAR TODOS OS DADOS** que existem atualmente nas suas tabelas (produtos, usu·rios, etc.) para garantir um ambiente limpo para cada teste.
+> Isso significa que ao rodar a su√≠te de testes, o trait `RefreshDatabase` do Laravel **IR√Å APAGAR TODOS OS DADOS** que existem atualmente nas suas tabelas (produtos, usu√°rios, etc.) para garantir um ambiente limpo para cada teste.
 >
-> **Proceda com cuidado.** ApÛs a execuÁ„o dos testes, seus dados de desenvolvimento ser„o perdidos. Ser· necess·rio repopular o banco de dados para continuar usando a aplicaÁ„o normalmente.
+> **Proceda com cuidado.** Ap√≥s a execu√ß√£o dos testes, seus dados de desenvolvimento ser√£o perdidos. Ser√° necess√°rio repopular o banco de dados para continuar usando a aplica√ß√£o normalmente.
 
-### 1. ConfiguraÁ„o do Ambiente de Teste
+### 1. Configura√ß√£o do Ambiente de Teste
 
-Antes de rodar os testes pela primeira vez, vocÍ precisa criar o arquivo de ambiente de testes a partir do exemplo fornecido.
+Antes de rodar os testes pela primeira vez, voc√™ precisa criar o arquivo de ambiente de testes a partir do exemplo fornecido.
 
 ```bash
 cp .env.testing.example .env.testing
 ```
 
-**Importante: Edite o arquivo `.env.testing`!** Para que a aplicaÁ„o no contÍiner Docker consiga se comunicar com o contÍiner do banco de dados, vocÍ precisa ajustar as vari·veis de conex„o. Garanta que as seguintes vari·veis estejam configuradas da seguinte forma:
+**Importante: Edite o arquivo `.env.testing`!** Para que a aplica√ß√£o no cont√™iner Docker consiga se comunicar com o cont√™iner do banco de dados, voc√™ precisa ajustar as vari√°veis de conex√£o. Garanta que as seguintes vari√°veis estejam configuradas da seguinte forma:
 
 ```ini
 DB_CONNECTION=mysql
@@ -146,11 +146,11 @@ DB_DATABASE=laravel_db
 DB_USERNAME=user
 DB_PASSWORD=password
 ```
-> **Nota:** O valor `DB_HOST=db` È essencial. `db` È o nome do serviÁo do banco de dados definido no arquivo `docker-compose.yml`, permitindo que os contÍineres se comuniquem pela rede interna do Docker.
+> **Nota:** O valor `DB_HOST=db` √© essencial. `db` √© o nome do servi√ßo do banco de dados definido no arquivo `docker-compose.yml`, permitindo que os cont√™ineres se comuniquem pela rede interna do Docker.
 
-### 2. Executando a SuÌte de Testes
+### 2. Executando a Su√≠te de Testes
 
-Para rodar todos os testes (Unit·rios e de Feature), execute o seguinte comando no seu terminal:
+Para rodar todos os testes (Unit√°rios e de Feature), execute o seguinte comando no seu terminal:
 
 ```bash
 docker-compose exec app php artisan test
@@ -164,62 +164,62 @@ Como mencionado no aviso, os testes apagaram seus dados. Para repopular o banco 
 docker-compose exec app php artisan db:seed
 ```
 
-ApÛs este comando, sua aplicaÁ„o web voltar· a ter os dados iniciais para uso, precisando apenas cadastrar o usu·rio novamente para poder acessar o sistema.
+Ap√≥s este comando, sua aplica√ß√£o web voltar√° a ter os dados iniciais para uso, precisando apenas cadastrar o usu√°rio novamente para poder acessar o sistema.
 
-## ? DocumentaÁ„o da API
+## üîå Documenta√ß√£o da API
 
-> **?? Importante: Header ObrigatÛrio**
+> **‚ùóÔ∏è Importante: Header Obrigat√≥rio**
 >
-> Todas as requisiÁıes feitas para esta API **devem** incluir o header `Accept` com o valor `application/json`.
+> Todas as requisi√ß√µes feitas para esta API **devem** incluir o header `Accept` com o valor `application/json`.
 >
 > `Accept: application/json`
 >
-> Se este header n„o for enviado, a requisiÁ„o poder· ser interpretada como vinda de uma aplicaÁ„o web (full stack). Como resultado, em caso de erros (especialmente falhas de validaÁ„o), o Laravel retornar· uma p·gina HTML de redirecionamento em vez de uma resposta JSON estruturada, o que quebrar· a integraÁ„o com a sua aplicaÁ„o.
+> Se este header n√£o for enviado, a requisi√ß√£o poder√° ser interpretada como vinda de uma aplica√ß√£o web (full stack). Como resultado, em caso de erros (especialmente falhas de valida√ß√£o), o Laravel retornar√° uma p√°gina HTML de redirecionamento em vez de uma resposta JSON estruturada, o que quebrar√° a integra√ß√£o com a sua aplica√ß√£o.
 
-### AutenticaÁ„o
-Para acessar os endpoints protegidos, primeiro obtenha um token via `/api/login` e envie-o no header `Authorization` de suas requisiÁıes subsequentes.
+### Autentica√ß√£o
+Para acessar os endpoints protegidos, primeiro obtenha um token via `/api/login` e envie-o no header `Authorization` de suas requisi√ß√µes subsequentes.
 
 `Authorization: Bearer <SEU_TOKEN>`
 
 ---
 
-### Endpoints P˙blicos
+### Endpoints P√∫blicos
 
-| MÈtodo | Endpoint         | DescriÁ„o                    | Exemplo de Body (Payload)                               |
+| M√©todo | Endpoint         | Descri√ß√£o                    | Exemplo de Body (Payload)                               |
 | :----- | :--------------- | :--------------------------- | :------------------------------------------------------ |
-| `POST` | `/api/register`  | Registra um novo usu·rio.    | `{ "name": "Seu Nome", "email": "email@teste.com", "password": "password", "password_confirmation": "password" }` |
-| `POST` | `/api/login`     | Autentica um usu·rio e retorna um token. | `{ "email": "email@teste.com", "password": "password" }` |
+| `POST` | `/api/register`  | Registra um novo usu√°rio.    | `{ "name": "Seu Nome", "email": "email@teste.com", "password": "password", "password_confirmation": "password" }` |
+| `POST` | `/api/login`     | Autentica um usu√°rio e retorna um token. | `{ "email": "email@teste.com", "password": "password" }` |
 
 ---
 
 ### Endpoints Protegidos (Produtos)
 
-| MÈtodo   | Endpoint             | DescriÁ„o                        | Exemplo de Body (Payload)                                                |
+| M√©todo   | Endpoint             | Descri√ß√£o                        | Exemplo de Body (Payload)                                                |
 | :------- |:---------------------| :------------------------------- |:-------------------------------------------------------------------------|
-| `POST`   | `/api/logout`        | Invalida o token de autenticaÁ„o. | -                                                                        |
+| `POST`   | `/api/logout`        | Invalida o token de autentica√ß√£o. | -                                                                        |
 | `GET`    | `/api/products`      | Lista todos os produtos (paginado). | -                                                                        |
 | `POST`   | `/api/products`      | Cria um novo produto.            | `{ "name": "Produto Novo", "price": 19.99, "stock_quantity": 100 }`      |
 | `GET`    | `/api/products/{id}` | Exibe os detalhes de um produto. | -                                                                        |
 | `PUT`    | `/api/products/{id}` | Atualiza um produto existente.   | `{ "name": "Produto Atualizado", "price": 25.50, "stock_quantity": 53 }` |
 | `DELETE` | `/api/products/{id}` | Exclui um produto.               | -                                                                        |
 
-## ?? Screenshots das Principais Telas
+## üñºÔ∏è Screenshots das Principais Telas
 
 ### Tela de Login
 ![img_1.png](img_1.png)
 
-### Tela de Login com Credenciais Inv·lidas.
+### Tela de Login com Credenciais Inv√°lidas.
 ![img_2.png](img_2.png)
 
 ### Tela de Produtos
 ![img_3.png](img_3.png)
 
-### DemonstraÁ„o do CRUD
-![DemonstraÁ„o do CRUD](.github/assets/CRUD.gif)
+### Demonstra√ß√£o do CRUD
+![Demonstra√ß√£o do CRUD](.github/assets/CRUD.gif)
 
-## ?? Screenshots das Rotas da API
+## üñºÔ∏è Screenshots das Rotas da API
 
-### Rota de Registro de Usu·rio
+### Rota de Registro de Usu√°rio
 ![img_4.png](img_4.png)
 
 ### Rota de Login
