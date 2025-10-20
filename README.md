@@ -1,61 +1,241 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Gerenciador de Produtos - Teste Técnico Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![PHP](https://img.shields.io/badge/PHP-8.3%2B-777BB4?style=for-the-badge&logo=php)
+![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel)
+![Docker](https://img.shields.io/badge/Docker-28.3.2%2B-2496ED?style=for-the-badge&logo=docker)
+![MySQL](https://img.shields.io/badge/MySQL-9.4.0-4479A1?style=for-the-badge&logo=mysql)
+![PHPUnit](https://img.shields.io/badge/Tests-PHPUnit-8892BF?style=for-the-badge)
 
-## About Laravel
+## ? Descrição do Projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este projeto é uma aplicação web completa para o gerenciamento de produtos, desenvolvida como solução para um teste técnico de Desenvolvedor PHP. A aplicação foi construída utilizando **Laravel 12** e encapsulada em um ambiente **Docker**, seguindo as melhores práticas de desenvolvimento, como princípios **SOLID**, arquitetura limpa e uma suíte de **testes automatizados**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+A solução oferece duas interfaces principais:
+1.  Uma **Interface Web (Full-Stack)** com autenticação e um CRUD completo para gerenciar produtos.
+2.  Uma **API RESTful** protegida por token (Laravel Sanctum) que expõe os mesmos endpoints de CRUD para integração com outros sistemas.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ? Índice
 
-## Learning Laravel
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Funcionalidades Implementadas](#-funcionalidades-implementadas)
+- [Como Executar a Aplicação](#-como-executar-a-aplicação)
+- [Como Executar os Testes](#-como-executar-os-testes)
+- [Documentação da API](#-documentação-da-api)
+- [Screenshots (Exemplos)](#-screenshots-exemplos)
+- [Licença](#-licença)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ? Tecnologias Utilizadas
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Backend:** PHP 8.3, Laravel 12
+- **Frontend:** Blade, Bootstrap 5
+- **Banco de Dados:** MySQL 9.4.0
+- **Servidores e Contêineres:** Docker, Docker Compose
+- **Autenticação:** Laravel Breeze (Web), Laravel Sanctum (API)
+- **Testes:** PHPUnit
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ? Funcionalidades Implementadas
 
-## Laravel Sponsors
+- [x] **Ambiente Docker:** Configuração com Docker Compose para os serviços de `app` (PHP-FPM) e `db` (MySQL).
+- [x] **Sistema de Autenticação:**
+    - [x] Autenticação baseada em sessão para a interface web (Laravel Breeze).
+    - [x] Autenticação baseada em token para a API (Laravel Sanctum).
+- [x] **CRUD Completo via Interface Web:**
+    - [x] Tela de listagem de produtos com paginação.
+    - [x] Formulários para criar e editar produtos.
+    - [x] Tela para visualização de detalhes de um produto.
+    - [x] Funcionalidade para excluir produtos.
+- [x] **API RESTful Protegida:**
+    - [x] Endpoints para todas as operações CRUD (`index`, `store`, `show`, `update`, `destroy`).
+    - [x] Rotas protegidas exigindo um token de autenticação `Bearer`.
+- [x] **Validações e Tratamento de Erros:**
+    - [x] Validações robustas no backend utilizando `Form Requests`.
+    - [x] Feedback visual de erros nos formulários web.
+    - [x] Respostas de erro padronizadas em JSON para a API.
+- [x] **Testes Automatizados:**
+    - [x] **Testes Unitários:** Para validar as restrições e o comportamento do Model `Produto`.
+    - [x] **Testes de Feature:** Cobertura completa para todos os controllers (Web e API), simulando requisições HTTP e validando respostas, status e interações com o banco de dados.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ?? Como Executar a Aplicação
 
-### Premium Partners
+### Pré-requisitos
+- Git
+- Docker
+- Docker Compose
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Passos para Instalação
 
-## Contributing
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/GuilhermeWatanabe/laravel-product-management.git](https://github.com/GuilhermeWatanabe/laravel-product-management.git)
+    cd laravel-product-management
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2.  **Copie e Configure o arquivo de ambiente:**
+    Primeiro, copie o arquivo de exemplo.
+    ```bash
+    cp .env.example .env
+    ```
+    **Importante: Edite o arquivo `.env`!** Para que a aplicação no contêiner Docker consiga se comunicar com o contêiner do banco de dados, você precisa ajustar as variáveis de conexão. Garanta que as seguintes variáveis estejam configuradas da seguinte forma:
 
-## Code of Conduct
+    ```ini
+    DB_CONNECTION=mysql
+    DB_HOST=db
+    DB_PORT=3306
+    DB_DATABASE=laravel_db
+    DB_USERNAME=user
+    DB_PASSWORD=password
+    ```
+    > **Nota:** O valor `DB_HOST=db` é essencial. `db` é o nome do serviço do banco de dados definido no arquivo `docker-compose.yml`, permitindo que os contêineres se comuniquem pela rede interna do Docker.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3.  **Suba os contêineres do Docker:**
+    Este comando irá construir as imagens e iniciar os serviços em background.
+    ```bash
+    docker-compose up -d --build
+    ```
 
-## Security Vulnerabilities
+4.  **Instale as dependências do Composer:**
+    ```bash
+    docker-compose exec app composer install
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5.  **Gere a chave da aplicação:**
+    ```bash
+    docker-compose exec app php artisan key:generate
+    ```
 
-## License
+6.  **Execute as migrations e popule o banco de dados:**
+    Este comando irá criar as tabelas e popular a tabela de produtos com dados de exemplo (o usuário para acesso ainda precisará ser criado na tela de registro do sistema).
+    ```bash
+    docker-compose exec app php artisan migrate --seed
+    ```
+    
+### Acesso à Aplicação
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+? Pronto! A aplicação já está rodando.
+
+- **Interface Web:** [http://localhost:8000](http://localhost:8000)
+- **Base da API:** `http://localhost:8000/api/`
+
+## ? Como Executar os Testes
+
+A aplicação possui uma suíte completa de testes unitários e de feature para garantir a qualidade e a integridade do código.
+
+### ?? AVISO IMPORTANTE: Configuração do Banco de Dados de Testes
+
+> Este projeto está configurado para executar os testes no **mesmo banco de dados** utilizado para o desenvolvimento (`DB_HOST=db`, `DB_DATABASE=laravel_db`).
+>
+> Isso significa que ao rodar a suíte de testes, o trait `RefreshDatabase` do Laravel **IRÁ APAGAR TODOS OS DADOS** que existem atualmente nas suas tabelas (produtos, usuários, etc.) para garantir um ambiente limpo para cada teste.
+>
+> **Proceda com cuidado.** Após a execução dos testes, seus dados de desenvolvimento serão perdidos. Será necessário repopular o banco de dados para continuar usando a aplicação normalmente.
+
+### 1. Configuração do Ambiente de Teste
+
+Antes de rodar os testes pela primeira vez, você precisa criar o arquivo de ambiente de testes a partir do exemplo fornecido.
+
+```bash
+cp .env.testing.example .env.testing
+```
+
+**Importante: Edite o arquivo `.env.testing`!** Para que a aplicação no contêiner Docker consiga se comunicar com o contêiner do banco de dados, você precisa ajustar as variáveis de conexão. Garanta que as seguintes variáveis estejam configuradas da seguinte forma:
+
+```ini
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=user
+DB_PASSWORD=password
+```
+> **Nota:** O valor `DB_HOST=db` é essencial. `db` é o nome do serviço do banco de dados definido no arquivo `docker-compose.yml`, permitindo que os contêineres se comuniquem pela rede interna do Docker.
+
+### 2. Executando a Suíte de Testes
+
+Para rodar todos os testes (Unitários e de Feature), execute o seguinte comando no seu terminal:
+
+```bash
+docker-compose exec app php artisan test
+```
+
+### 3. Restaurando os Dados de Desenvolvimento
+
+Como mencionado no aviso, os testes apagaram seus dados. Para repopular o banco com os dados de exemplo novamente (os `seeders`), execute o seguinte comando:
+
+```bash
+docker-compose exec app php artisan db:seed
+```
+
+Após este comando, sua aplicação web voltará a ter os dados iniciais para uso, precisando apenas cadastrar o usuário novamente para poder acessar o sistema.
+
+## ? Documentação da API
+
+> **?? Importante: Header Obrigatório**
+>
+> Todas as requisições feitas para esta API **devem** incluir o header `Accept` com o valor `application/json`.
+>
+> `Accept: application/json`
+>
+> Se este header não for enviado, a requisição poderá ser interpretada como vinda de uma aplicação web (full stack). Como resultado, em caso de erros (especialmente falhas de validação), o Laravel retornará uma página HTML de redirecionamento em vez de uma resposta JSON estruturada, o que quebrará a integração com a sua aplicação.
+
+### Autenticação
+Para acessar os endpoints protegidos, primeiro obtenha um token via `/api/login` e envie-o no header `Authorization` de suas requisições subsequentes.
+
+`Authorization: Bearer <SEU_TOKEN>`
+
+---
+
+### Endpoints Públicos
+
+| Método | Endpoint         | Descrição                    | Exemplo de Body (Payload)                               |
+| :----- | :--------------- | :--------------------------- | :------------------------------------------------------ |
+| `POST` | `/api/register`  | Registra um novo usuário.    | `{ "name": "Seu Nome", "email": "email@teste.com", "password": "password", "password_confirmation": "password" }` |
+| `POST` | `/api/login`     | Autentica um usuário e retorna um token. | `{ "email": "email@teste.com", "password": "password" }` |
+
+---
+
+### Endpoints Protegidos (Produtos)
+
+| Método   | Endpoint             | Descrição                        | Exemplo de Body (Payload)                                                |
+| :------- |:---------------------| :------------------------------- |:-------------------------------------------------------------------------|
+| `POST`   | `/api/logout`        | Invalida o token de autenticação. | -                                                                        |
+| `GET`    | `/api/products`      | Lista todos os produtos (paginado). | -                                                                        |
+| `POST`   | `/api/products`      | Cria um novo produto.            | `{ "name": "Produto Novo", "price": 19.99, "stock_quantity": 100 }`      |
+| `GET`    | `/api/products/{id}` | Exibe os detalhes de um produto. | -                                                                        |
+| `PUT`    | `/api/products/{id}` | Atualiza um produto existente.   | `{ "name": "Produto Atualizado", "price": 25.50, "stock_quantity": 53 }` |
+| `DELETE` | `/api/products/{id}` | Exclui um produto.               | -                                                                        |
+
+## ?? Screenshots das Principais Telas
+
+### Tela de Login
+![img_1.png](img_1.png)
+
+### Tela de Login com Credenciais Inválidas.
+![img_2.png](img_2.png)
+
+### Tela de Produtos
+![img_3.png](img_3.png)
+
+### Demonstração do CRUD
+![Demonstração do CRUD](.github/assets/CRUD.gif)
+
+## ?? Screenshots das Rotas da API
+
+### Rota de Registro de Usuário
+![img_4.png](img_4.png)
+
+### Rota de Login
+![img_5.png](img_5.png)
+
+### Rota de Listagem de Produtos
+![img_6.png](img_6.png)
+
+### Rota de Cadastrar Produto
+![img_7.png](img_7.png)
+
+### Rota de Buscar Produto
+![img_8.png](img_8.png)
+
+### Rota de Atualizar Produto
+![img_9.png](img_9.png)
+
+### Rota de Deletar Produto
+![img_10.png](img_10.png)
