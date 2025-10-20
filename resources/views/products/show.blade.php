@@ -34,12 +34,6 @@
 
                 <div class="d-flex justify-content-end gap-2">
                     <a href="{{ route('products.index') }}" class="btn btn-secondary">Voltar para a Lista</a>
-                    <a href="{{ route('products.edit', $product) }}" class="btn btn-warning">Editar</a>
-                    <form action="{{ route('products.destroy', $product) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este produto?');">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Excluir</button>
-                    </form>
                 </div>
             </div>
         </div>

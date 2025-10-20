@@ -16,11 +16,6 @@
     </head>
     <body class="container-lg">
         <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
-            <div class="mb-4">
-                <a href="/">
-                    <x-application-logo class="text-secondary" style="width: 5rem; height: 5rem;"/>
-                </a>
-            </div>
 
             <div class="col-11 col-sm-10 col-md-8 col-lg-6 col-xl-4">
                 {{ $slot }}

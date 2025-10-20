@@ -1,9 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
     <div class="container-fluid">
-        <!-- Logo -->
-        <a class="navbar-brand" href="{{ route('dashboard') }}">
-            <x-application-logo style="height: 2.25rem; width: auto;" class="text-dark" />
-        </a>
 
         <!-- Hamburger Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,8 +11,8 @@
             <!-- Navigation Links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
-                        {{ __('Dashboard') }}
+                    <a class="nav-link {{ request()->routeIs('products.index') ? 'active' : '' }}" href="{{ route('products.index') }}">
+                        {{ __('Produtos') }}
                     </a>
                 </li>
             </ul>

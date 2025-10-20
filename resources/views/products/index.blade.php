@@ -54,7 +54,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="4" class="text-center">{{ __('Nenhum produto cadastrado.') }}</td>
+                            <td colspan="5" class="text-center">{{ __('Nenhum produto cadastrado.') }}</td>
                         </tr>
                     @endforelse
                     </tbody>
