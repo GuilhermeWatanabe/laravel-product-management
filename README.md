@@ -97,13 +97,24 @@ A solução oferece duas interfaces principais:
     php artisan key:generate
     ```
 
-5.  **Suba os contêineres do Docker:**
+5.  **Instale as dependências do NPM:**
+    ```bash
+    npm install
+    ```
+    
+6.  **Compile os assets de front-end (CSS/JS):**
+    Este comando irá gerar os arquivos necessários para que o front-end carregue corretamente.
+    ```bash
+    npm run build
+    ```
+
+7.  **Suba os contêineres do Docker:**
     Este comando irá construir as imagens e iniciar os serviços em background.
     ```bash
     docker-compose up -d --build
     ```
 
-6.  **Execute as migrations e popule o banco de dados:**
+8.  **Execute as migrations e popule o banco de dados:**
     Este comando irá criar as tabelas e popular a tabela de produtos com dados de exemplo (o usuário para acesso ainda precisará ser criado na tela de registro do sistema).
     ```bash
     docker compose exec app php artisan migrate --seed
